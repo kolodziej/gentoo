@@ -92,6 +92,7 @@ src_prepare() {
 	# Remove pointless GCC version check
 	sed -e '/^check_gcc$/d' -i configure || die
 
+	eapply "${FILESDIR}/${PN}-5.1.22-sysmacros.patch"
 	eapply_user
 }
 
